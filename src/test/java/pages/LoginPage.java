@@ -25,4 +25,5 @@ public class LoginPage {
         inpPassword.sendKeys(senha);
         btnEntrar.click();
     }
+
 }
