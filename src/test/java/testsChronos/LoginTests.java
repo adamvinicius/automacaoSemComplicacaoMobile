@@ -47,6 +47,31 @@ public class LoginTests {
         assertEquals("O email não é válido.", loginPage.getTxtEmailError());
     }
 
+    @Test
+    public void realizarLoginSenhaInvalida(){
+        loginPage.realizarLogin("teste@chronosacademy.com.br", "123");
+        assertEquals("A senha deve ter no mínimo 6 caracteres.", loginPage.getTxtPasswordError());
+    }
+
+    @Test
+    public void realizarLoginEmailEmBranco(){
+        loginPage.realizarLogin("", "123456");
+        assertEquals("O campo de email é obrigatório.", loginPage.getTxtEmailError());
+    }
+
+    @Test
+    public void realizarLoginSenhaEmBranco(){
+        loginPage.realizarLogin("teste@chronosacademy.com.br", "");
+        assertEquals("O campo de senha é obrigatório.", loginPage.getTxtPasswordError());
+    }
+
+    @Test
+    public void realizarLoginComEmailIncorreto(){
+        loginPage.realizarLogin("incorreto@chronosacademy.com.br", "123456");
+        assertEquals("Email ou senha incorretos.", loginPage.getTxtEmailError());
+    }
+
+
 
 
 
