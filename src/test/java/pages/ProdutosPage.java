@@ -14,4 +14,8 @@ public class ProdutosPage extends ProdutosMaps {
     public String getTextTituloProdutos(){
         return txtTituloProdutos.getText();
     }
+
+    public void clickPacoteCurso(){
+        btnPacoteCursos.click();
+    }
 }
