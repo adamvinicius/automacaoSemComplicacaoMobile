@@ -25,4 +25,7 @@ public class PagamentoMaps {
 
     @AndroidFindBy(accessibility = "confirmar_pagamento_botao")
     protected WebElement btnConfirmarPagamento;
+
+    @AndroidFindBy(accessibility = "pagamentoRealizado")
+    protected WebElement txtMsgPagamento;
 }
